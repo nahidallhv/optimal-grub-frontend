@@ -11,6 +11,15 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
+
+// Statik dosyaları sun
+app.use(express.static(path.join(__dirname, 'build'))); // 'build' dizini varsa
+
+// Herhangi bir route için index.html'i döndür
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build', 'index.html')); // 'build/index.html' dosyası
+});
+
 // POST endpoint for registration
 app.post('/register', async (req, res) => {
     const { firstName, lastName, email, whatsapp } = req.body;
