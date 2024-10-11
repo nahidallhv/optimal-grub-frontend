@@ -4,6 +4,11 @@ const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
+const cors = require('cors');
+//
+app.use(cors({
+  origin: 'https://optimal-frontend.vercel.app/'
+}));
 
 
 const app = express();
