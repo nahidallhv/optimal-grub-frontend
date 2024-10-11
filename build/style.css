@@ -1,0 +1,518 @@
+body {
+  font-family: "Kanit", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(50px); /* Başlangıçta aşağıda olsun */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0); /* Yukarı hareket edip yerine gelsin */
+}
+
+.navbar {
+  position: fixed;
+  top: 0; /* Sabit navbar üçün yuxarıdan sıfır boşluq */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #1b0357;
+  color: white;
+  justify-content: space-between;
+  z-index: 1000; /* Navbarın digər elementlərdən öndə görünməsi üçün */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Aşağıya kölgə effekti */
+}
+
+/* Logo və kurs adı konteyneri */
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-left: 60px;
+}
+
+/* Logo üçün stil */
+.logo {
+  width: 120px; /* Loqonun ölçüsünü buradan dəyişə bilərsiniz */
+  height: auto;
+  margin-right: 10px;
+}
+
+/* Kurs adı üçün stil */
+.course-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Qeydiyyatdan keç düyməsi */
+.nav-button {
+  border: none;
+  padding: 15px 20px;
+  margin-right: 100px;
+  border-radius: 10px;
+  color: #fff;
+  background-color: #45a049;
+  font-weight: 700;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  cursor: pointer;
+  background-color: rgb(3, 195, 195);
+}
+
+/* Hero (Başlıq) hissəsi üçün stil */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  height: 100vh; /* Ekranın tam hündürlüyünü əhatə edir */
+  background-image: url(background.jpg);
+  background-size: cover;
+  padding: 20px;
+}
+
+.content-wrapper {
+  max-width: 600px; /* Məzmun genişliyi */
+  margin-left: 60px;
+  margin-bottom: 60px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #fff; /* Başlığın rəngi */
+}
+
+p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #fff;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.details-btn {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  background-color: #045f09;
+  font-weight: 600;
+  font-size: 25px;
+  transition: background-color 0.3s ease;
+}
+
+.details-btn:hover {
+  cursor: pointer;
+  background-color: #1b0357;
+}
+
+/* Kurs haqqında bölməsi */
+.course-about {
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.course-about h2 {
+  font-size: 2rem;
+  color: #1b0357;
+  margin-left: 60px; /* Başlıq sola hizalandı */
+}
+
+.course-about p {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+  margin-left: 60px; /* Mətn sola hizalandı */
+  max-width: 800px;
+}
+
+/* İkonlar hissəsi alt alta düzülməsi üçün */
+.icon-section {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row; /* İkonları alt alta düzür */
+  gap: 20px; /* İkonlar arasındaki məsafə */
+  margin-left: 60px; /* İkonlar sola hizalandı */
+}
+
+.icon {
+  width: 50px;
+  height: auto;
+}
+
+/* Bu kurs kimlər üçündür bölməsi */
+.course-for {
+  padding: 40px 20px;
+  background-color: #f7f7f7;
+}
+
+.course-for h2 {
+  font-size: 2rem;
+  color: #1b0357;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Kartlar konteyneri */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Kartlar arasındakı məsafə */
+}
+
+/* Hər bir kartın dizaynı */
+.card {
+  color: #fff;
+  width: 280px;
+  padding: 20px;
+  background-color: aquamarine;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Kartın hover effekti */
+.card:hover {
+  background-color: aqua;
+  transform: translateY(-10px); /* Hover zamanı yuxarıya qalxır */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Daha dərin kölgə */
+}
+
+/* Kartın başlığı (nömrəsi) */
+.card h3 {
+  font-size: 2.5rem;
+  color: #1b0357;
+  margin-bottom: 10px;
+}
+
+/* Kartın mətni */
+.card p {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Front-End proqramçılarının əmək haqqı bölməsi */
+.salary-info {
+  padding: 40px 20px;
+  background-color: #f7f7f7;
+}
+
+.salary-info h2 {
+  font-size: 2rem;
+  color: #1b0357;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Əmək haqqı kartları konteyneri */
+.salary-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Kartlar arasındakı məsafə */
+}
+
+/* Hər bir əmək haqqı kartının dizaynı */
+.salary-card {
+  width: 280px;
+  padding: 20px;
+  background-color: aquamarine;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Kartın hover effekti */
+.salary-card:hover {
+  background-color: aqua;
+  transform: translateY(-10px); /* Hover zamanı yuxarıya qalxır */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Daha dərin kölgə */
+}
+
+/* Kartın başlığı (mütəxəssis səviyyəsi) */
+.salary-card h3 {
+  font-size: 1.8rem;
+  color: #1b0357;
+  margin-bottom: 10px;
+}
+
+/* Kartın əmək haqqı mətni */
+.salary-card p {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+/* Kartın təcrübə müddəti */
+.salary-card small {
+  font-size: 1rem;
+  color: #777;
+  line-height: 1.6;
+}
+
+/* Kursun proqramı bölməsi */
+/* Kursun proqramı bölməsi */
+/* Kursun proqramı bölməsi */
+.program-info {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.program-info h2 {
+  font-size: 2rem;
+  color: #1b0357;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Proqram kartları konteyneri */
+.program-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Kartlar arasındakı məsafə */
+}
+
+/* Hər bir proqram kartının dizaynı */
+.program-card {
+  width: 550px;
+  padding: 20px;
+  background-color: aquamarine;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Soldan hizalama */
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Kartın hover effekti */
+.program-card:hover {
+  background-color: aqua;
+  transform: translateY(-10px); /* Hover zamanı yuxarıya qalxır */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Daha dərin kölgə */
+}
+
+/* Kartın başlığı (ay) */
+.program-card h3 {
+  font-size: 1.5rem;
+  color: #1b0357;
+  margin-bottom: 10px;
+}
+
+/* Kartın mətni */
+.program-card p {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 10px 0;
+}
+
+/* Karttaki liste */
+.program-card ul {
+  list-style-type: disc; /* Liste işarəsi */
+  margin-left: 20px; /* Soldan iç boşluq */
+  padding: 0; /* Paddingi sıfırlama */
+}
+
+.program-card li {
+  font-size: 1rem;
+  color: #555; /* Daha soluk renk */
+}
+
+/* Kayıt formu bölməsi */
+.registration {
+  display: flex; /* Flexbox ile ortalamak için */
+  flex-direction: column; /* Dikey yönde düzenleme */
+  align-items: center; /* Ortaya yerleştirme */
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  margin-top: 40px; /* Üst kısımda boşluk */
+}
+
+/* Form yapısının genişliği */
+.registration-form {
+  width: 600px; /* Form genişliği */
+  max-width: 100%; /* Ekran genişliğini aşmasın */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gölgelendirme efekti */
+  border-radius: 10px; /* Köşe yuvarlama */
+  padding: 20px; /* İç boşluk */
+}
+
+/* Form başlığı */
+.registration h2 {
+  font-size: 2rem;
+  color: #1b0357;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Form grubu */
+.form-group {
+  width: 96%;
+  margin-bottom: 20px;
+}
+
+/* Label dizaynı */
+.form-group label {
+  display: block;
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* Input alanlarının dizaynı */
+.registration-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+/* Buton dizaynı */
+.registration-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #1b0357;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px; /* Üstteki elemanlardan biraz boşluk */
+}
+
+/* Buton hover efekti */
+.registration-form button:hover {
+  background-color: #155a8a; /* Daha koyu bir renk */
+}
+
+/* Mobil görünüm için stil ayarlamaları */
+@media (max-width: 768px) {
+  .navbar {
+    height: 45px;
+    display: flex;
+    justify-content: space-between; /* Logo ve buton arasındaki boşluğu ayarla */
+    align-items: center; /* Dikey olarak ortala */
+    padding: 10px 15px; /* Navbar iç boşluklarını ayarla */
+  }
+
+  .logo-container {
+    margin-left: 5px;
+    display: flex;
+    align-items: center; /* Logo ve metni dikey olarak ortala */
+  }
+
+  .logo {
+    width: 90px; /* Logonun boyutunu küçült */
+    height: auto; /* Orantılı kalması için yükseklik otomatik ayarlanır */
+  }
+
+  .course-name {
+    font-size: 1.1rem; /* Kurs adının boyutunu normal tut */
+    white-space: nowrap; /* Metni taşmaması için tek satırda tut */
+  }
+
+  .nav-button {
+    margin-left: 23px;
+    font-size: 0.9rem; /* Butonun boyutunu küçült */
+    padding: 10px 10px; /* Buton iç boşluklarını ayarla */
+    border: none; /* Buton kenarlığını kaldır */
+    border-radius: 5px; /* Buton kenarlarını yuvarla */
+    cursor: pointer; /* İmleç üzerinde pointer göster */
+    transition: background-color 0.3s; /* Geçiş efekti ekle */
+  }
+
+  .nav-button:hover {
+    background-color: #0056b3; /* Hover durumunda arka plan rengini değiştir */
+  }
+
+  .content-wrapper {
+    max-width: 90%; /* Mobilde içerik genişliğini artır */
+    margin: 0 auto; /* Ortaya hizala */
+  }
+
+  h1 {
+    font-size: 2rem; /* Mobilde başlık boyutunu azalt */
+  }
+
+  p {
+    font-size: 1rem; /* Mobilde paragraf boyutunu azalt */
+  }
+
+  .details-btn {
+    margin-top: 20px;
+    font-size: 20px; /* Mobilde düğme boyutunu ayarla */
+  }
+  .course-about {
+    max-width: 800px; /* Maksimum genişlik ayarı */
+    margin: 0 auto; /* Ortala */
+    padding: 20px; /* İç boşluk */
+  }
+  .course-description {
+    text-align: justify; /* Yazıyı iki yana yasla */
+  }
+
+  .course-about h2,
+  .course-for h2 {
+    font-size: 1.5rem; /* Başlık boyutunu mobilde azalt */
+    margin-left: 0; /* Sola hizalamayı kaldır */
+    text-align: center; /* Merkezde hizala */
+  }
+
+  .course-about p,
+  .salary-info p,
+  .program-info p {
+    font-size: 1rem; /* Paragraf boyutunu mobilde ayarla */
+    margin-left: 0; /* Sola hizalamayı kaldır */
+  }
+
+  .icon-section {
+    display: grid; /* Grid düzenini etkinleştir */
+    grid-template-columns: repeat(3, 1fr); /* 3 sütun oluştur */
+    gap: 20px; /* Sütunlar arasında boşluk */
+    margin-left: 0;
+    justify-items: center; /* İkonları ortala */
+    align-items: center; /* İkonları dikey olarak ortala */
+  }
+  
+  .icon {
+    max-width: 100%; /* İkonların maksimum genişliğini ayarla */
+    height: auto; /* Yüksekliği otomatik ayarla */
+  }
+
+  .card-container,
+  .salary-card-container,
+  .program-card-container {
+    flex-direction: column; /* Kartları alt alta diz */
+    align-items: center; /* Merkezde hizala */
+    gap: 15px; /* Kartlar arası boşluğu ayarla */
+  }
+
+  .card,
+  .salary-card,
+  .program-card {
+    width: 90%; /* Kart genişliğini mobilde ayarla */
+    text-align: center; /* Metni merkezde hizala */
+  }
+
+  .salary-card h3,
+  .program-card h3 {
+    font-size: 1.5rem; /* Kart başlık boyutunu mobilde ayarla */
+  }
+}

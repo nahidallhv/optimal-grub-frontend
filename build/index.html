@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Optimal Qrub Frontend Kursu</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo-container">
+          <img src="logo.jpeg" alt="Kursun Logosu" class="logo" />
+          <span class="course-name">Optimal Qrub MMC</span>
+        </div>
+        <button class="nav-button">Qeydiyyat</button>
+      </nav>
+    </header>
+
+    <!-- Hero (Başlıq) Hissəsi -->
+    <section class="hero-section">
+      <div class="content-wrapper">
+        <h1>Front-End Proqramlaşdırma Kursu</h1>
+        <p>
+          Front-End proqramçılar veb əsaslı proqram təminatının, veb-saytların
+          və istifadəçi interfeyslərinin hazırlanmasını (kodlaşdırılmasını)
+          həyata keçirirlər. Bu mütəxəssislər dünyanın istənilən nöqtəsindən
+          distant (remote) olaraq çalışıb, yüksək gəlir əldə edə bilirlər.
+        </p>
+        <button class="details-btn">Ətraflı</button>
+      </div>
+    </section>
+
+    <!-- Kurs Haqqında Hissə -->
+    <section class="course-about">
+      <h2 class="hidden">Kurs haqqında</h2>
+      <p class="course-description hidden">
+        Front-End proqramçılar nə edir? Onlar veb saytların və tətbiqlərin
+        vizual hissəsini, interfeyslərini proqramlaşdırma vasitəsilə
+        hazırlayırlar. Siz hər hansı bir veb-sayta daxil olduqda, saytda
+        gördüyünüz bütün elementlər Front-End proqramçıların əməyinin hesabına
+        görünür. Dizayner tərəfdən hazırlanmış maketi Front-End proqramçı
+        kodlama vasitəsilə hazırlayır, bütün elementlərin və vizual effektlərin
+        işləməsini də bu mütəxəssislər təmin edir. Front-End proqramçının
+        vəzifələrindən biri də budur ki, veb sayt rahat və sürətli işləsin.
+        Front-End mütəxəssisin digər bir öhdəliyi də budur ki, o hazırladığı
+        səhifələri bütün ekran ölçülərinə uyğunlaşdırmalıdır: telefonlar,
+        kompüter monitorları, noutbuklar, planşetlər, televizorlar və s.
+      </p>
+      <!-- İkonlar Hissəsi -->
+      <div class="icon-section hidden">
+        <img src="react-icon.svg" alt="React" class="icon" />
+        <img src="github-icon.svg" alt="GitHub" class="icon" />
+        <img src="js-icon.svg" alt="Script" class="icon" />
+        <img src="js-icon.svg" alt="Script" class="icon" />
+        <img src="js-icon.svg" alt="Script" class="icon" />
+        <img src="js-icon.svg" alt="Script" class="icon" />
+        <img src="js-icon.svg" alt="Script" class="icon" />
+        <img src="js-icon.svg" alt="Script" class="icon" />
+        <img src="js-icon.svg" alt="Script" class="icon" />
+        <!-- Daha çox ikon əlavə edilə bilər -->
+      </div>
+    </section>
+
+    <section class="course-for hidden">
+      <h2>Bu kurs kimlər üçündür?</h2>
+      <div class="card-container">
+        <div class="card">
+          <h3>1</h3>
+          <p>IT sahəsinə giriş etmək istəyənlər üçün</p>
+        </div>
+        <div class="card">
+          <h3>2</h3>
+          <p>Proqramlaşdırma sahəsinə başlamaq istəyənlər üçün</p>
+        </div>
+        <div class="card">
+          <h3>3</h3>
+          <p>JavaScript dilini öyrənmək istəyən IT-mütəxəssislər üçün</p>
+        </div>
+        <div class="card">
+          <h3>4</h3>
+          <p>Front-End biliklərini gücləndirmək istəyənlər üçün</p>
+        </div>
+      </div>
+    </section>
+    <section class="salary-info hidden">
+      <h2>Front-End proqramçılar nə qədər əmək haqqı alır?</h2>
+      <div class="salary-card-container hidden">
+        <div class="salary-card hidden">
+          <h3>Junior mütəxəssis</h3>
+          <p>500 - 1000 AZN</p>
+          <small>Junior mütəxəssis 3-12 ay təcrübə</small>
+        </div>
+        <div class="salary-card hidden">
+          <h3>Middle mütəxəssis</h3>
+          <p>1000 - 2000 AZN</p>
+          <small>Middle mütəxəssis 1-5 il təcrübə</small>
+        </div>
+        <div class="salary-card hidden">
+          <h3>Senior mütəxəssis</h3>
+          <p>2000 - 5000 AZN</p>
+          <small>Senior mütəxəssis 5 ildən artıq təcrübə</small>
+        </div>
+      </div>
+    </section>
+    <section class="program-info">
+      <h2>Kursun Proqramı</h2>
+      <div class="program-card-container">
+        <div class="program-card hidden">
+          <h3>1-ci Ay</h3>
+          <p>Front-end Basics:</p>
+          <ul>
+            <li>Frontend vs. Backend</li>
+            <li>Web Architecture</li>
+            <li>Creating Environment: vsCode, Emmets</li>
+            <li>HTML5, CSS3 Basics</li>
+            <li>Version Control Systems: Git, GitHub, Working with a Team</li>
+            <li>
+              Introduction to AI and AI Tools: GitHub Copilot for coding
+              assistance
+            </li>
+            <li>HTML Forms: Input, Input Types</li>
+            <li>HTML5 Semantic Tags: Audio, Video Tags</li>
+            <li>
+              CSS Layouts: Flexbox, Grid Layout, flex-direction,
+              justify-content, align-items
+            </li>
+            <li>AI in Design: Creating Layouts with AI Tools</li>
+            <li>CSS Animations: Parallax, 3D Animations</li>
+            <li>CSS Preprocessors: SASS, CSS Methodologies (BEM)</li>
+            <li>Responsive Design: Pixel Perfect, Responsive Websites</li>
+            <li>Browser Compatibility: Using Vendor Prefixes</li>
+            <li>CSS Frameworks: Bootstrap 5, Materialize CSS, Tailwind CSS</li>
+          </ul>
+        </div>
+        <div class="program-card hidden">
+          <h3>2-ci Ay</h3>
+          <p>JavaScript Essentials:</p>
+          <ul>
+            <li>Frontend vs. Backend</li>
+            <li>Web Architecture</li>
+            <li>Creating Environment: vsCode, Emmets</li>
+            <li>HTML5, CSS3 Basics</li>
+            <li>Version Control Systems: Git, GitHub, Working with a Team</li>
+            <li>
+              Introduction to AI and AI Tools: GitHub Copilot for coding
+              assistance
+            </li>
+            <li>HTML Forms: Input, Input Types</li>
+            <li>HTML5 Semantic Tags: Audio, Video Tags</li>
+            <li>
+              CSS Layouts: Flexbox, Grid Layout, flex-direction,
+              justify-content, align-items
+            </li>
+            <li>AI in Design: Creating Layouts with AI Tools</li>
+            <li>CSS Animations: Parallax, 3D Animations</li>
+            <li>CSS Preprocessors: SASS, CSS Methodologies (BEM)</li>
+            <li>Responsive Design: Pixel Perfect, Responsive Websites</li>
+            <li>Browser Compatibility: Using Vendor Prefixes</li>
+            <li>CSS Frameworks: Bootstrap 5, Materialize CSS, Tailwind CSS</li>
+          </ul>
+        </div>
+        <div class="program-card hidden">
+          <h3>3-cü Ay</h3>
+          <p>React Basics:</p>
+          <ul>
+            <li>Frontend vs. Backend</li>
+            <li>Web Architecture</li>
+            <li>Creating Environment: vsCode, Emmets</li>
+            <li>HTML5, CSS3 Basics</li>
+            <li>Version Control Systems: Git, GitHub, Working with a Team</li>
+            <li>
+              Introduction to AI and AI Tools: GitHub Copilot for coding
+              assistance
+            </li>
+            <li>HTML Forms: Input, Input Types</li>
+            <li>HTML5 Semantic Tags: Audio, Video Tags</li>
+            <li>
+              CSS Layouts: Flexbox, Grid Layout, flex-direction,
+              justify-content, align-items
+            </li>
+            <li>AI in Design: Creating Layouts with AI Tools</li>
+            <li>CSS Animations: Parallax, 3D Animations</li>
+            <li>CSS Preprocessors: SASS, CSS Methodologies (BEM)</li>
+            <li>Responsive Design: Pixel Perfect, Responsive Websites</li>
+            <li>Browser Compatibility: Using Vendor Prefixes</li>
+            <li>CSS Frameworks: Bootstrap 5, Materialize CSS, Tailwind CSS</li>
+          </ul>
+        </div>
+        <div class="program-card hidden">
+          <h3>4-cü Ay</h3>
+          <p>Advanced JavaScript:</p>
+          <ul>
+            <li>Frontend vs. Backend</li>
+            <li>Web Architecture</li>
+            <li>Creating Environment: vsCode, Emmets</li>
+            <li>HTML5, CSS3 Basics</li>
+            <li>Version Control Systems: Git, GitHub, Working with a Team</li>
+            <li>
+              Introduction to AI and AI Tools: GitHub Copilot for coding
+              assistance
+            </li>
+            <li>HTML Forms: Input, Input Types</li>
+            <li>HTML5 Semantic Tags: Audio, Video Tags</li>
+            <li>
+              CSS Layouts: Flexbox, Grid Layout, flex-direction,
+              justify-content, align-items
+            </li>
+            <li>AI in Design: Creating Layouts with AI Tools</li>
+            <li>CSS Animations: Parallax, 3D Animations</li>
+            <li>CSS Preprocessors: SASS, CSS Methodologies (BEM)</li>
+            <li>Responsive Design: Pixel Perfect, Responsive Websites</li>
+            <li>Browser Compatibility: Using Vendor Prefixes</li>
+            <li>CSS Frameworks: Bootstrap 5, Materialize CSS, Tailwind CSS</li>
+          </ul>
+        </div>
+        <div class="program-card hidden">
+          <h3>5-ci Ay</h3>
+          <p>Project Development:</p>
+          <ul>
+            <li>Frontend vs. Backend</li>
+            <li>Web Architecture</li>
+            <li>Creating Environment: vsCode, Emmets</li>
+            <li>HTML5, CSS3 Basics</li>
+            <li>Version Control Systems: Git, GitHub, Working with a Team</li>
+            <li>
+              Introduction to AI and AI Tools: GitHub Copilot for coding
+              assistance
+            </li>
+            <li>HTML Forms: Input, Input Types</li>
+            <li>HTML5 Semantic Tags: Audio, Video Tags</li>
+            <li>
+              CSS Layouts: Flexbox, Grid Layout, flex-direction,
+              justify-content, align-items
+            </li>
+            <li>AI in Design: Creating Layouts with AI Tools</li>
+            <li>CSS Animations: Parallax, 3D Animations</li>
+            <li>CSS Preprocessors: SASS, CSS Methodologies (BEM)</li>
+            <li>Responsive Design: Pixel Perfect, Responsive Websites</li>
+            <li>Browser Compatibility: Using Vendor Prefixes</li>
+            <li>CSS Frameworks: Bootstrap 5, Materialize CSS, Tailwind CSS</li>
+          </ul>
+        </div>
+        <div class="program-card hidden">
+          <h3>6-cı Ay</h3>
+          <p>Interview Preparation:</p>
+          <ul>
+            <li>Frontend vs. Backend</li>
+            <li>Web Architecture</li>
+            <li>Creating Environment: vsCode, Emmets</li>
+            <li>HTML5, CSS3 Basics</li>
+            <li>Version Control Systems: Git, GitHub, Working with a Team</li>
+            <li>
+              Introduction to AI and AI Tools: GitHub Copilot for coding
+              assistance
+            </li>
+            <li>HTML Forms: Input, Input Types</li>
+            <li>HTML5 Semantic Tags: Audio, Video Tags</li>
+            <li>
+              CSS Layouts: Flexbox, Grid Layout, flex-direction,
+              justify-content, align-items
+            </li>
+            <li>AI in Design: Creating Layouts with AI Tools</li>
+            <li>CSS Animations: Parallax, 3D Animations</li>
+            <li>CSS Preprocessors: SASS, CSS Methodologies (BEM)</li>
+            <li>Responsive Design: Pixel Perfect, Responsive Websites</li>
+            <li>Browser Compatibility: Using Vendor Prefixes</li>
+            <li>CSS Frameworks: Bootstrap 5, Materialize CSS, Tailwind CSS</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="registration hidden">
+      <h2>Qeydiyyat Formu</h2>
+      <form class="registration-form hidden">
+        <div class="form-group">
+          <label for="first-name">Ad:</label>
+          <input type="text" id="first-name" name="first-name" required />
+        </div>
+        <div class="form-group">
+          <label for="last-name">Soyad:</label>
+          <input type="text" id="last-name" name="last-name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">E-poçt:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="whatsapp">WhatsApp Nömrəsi:</label>
+          <input
+            type="number"
+            id="whatsapp"
+            name="whatsapp"
+            placeholder="+994 XX XXX XX XX"
+            required
+          />
+        </div>
+        <button type="submit">Qeydiyyat</button>
+      </form>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
